@@ -3,7 +3,7 @@ import numpy as np
 
 polygon_points = []
 
-video_path = r"D:\Projects\Python\face-recognization\Vehicle-Counting-in-Lanes\carsvid.mp4"
+video_path = r"carsvid.mp4"
 cap = cv2.VideoCapture(video_path)
 
 if not cap.isOpened():
@@ -42,3 +42,4 @@ cv2.destroyAllWindows()
 print("\nPolygon Points:")
 for point in polygon_points:
     print(f"X: {point[0]}, Y: {point[1]}")
+
