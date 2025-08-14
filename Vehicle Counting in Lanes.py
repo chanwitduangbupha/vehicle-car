@@ -7,7 +7,7 @@ from sort import *
 import os
 
 # ======== ตั้งค่า path วิดีโอ ========
-video_path = r"D:\Projects\Python\face-recognization\Vehicle-Counting-in-Lanes\carsvid.mp4"
+video_path = r"carsvid.mp4"
 
 # ======== ตรวจสอบว่าไฟล์วิดีโอมีอยู่จริง ========
 if not os.path.exists(video_path):
@@ -22,7 +22,7 @@ if not cap.isOpened():
 model = YOLO('yolov8n.pt')
 
 classnames = []
-with open(r"D:\Projects\Python\face-recognization\Vehicle-Counting-in-Lanes\classes.txt", 'r') as f:
+with open(r"classes.txt", 'r') as f:
     classnames = f.read().splitlines()
 
 road_zoneA = np.array([[308, 789], [711, 807], [694, 492], [415, 492], [309, 790]], np.int32)
@@ -82,3 +82,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
